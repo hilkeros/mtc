@@ -11,9 +11,40 @@
 
 ActiveRecord::Schema.define(:version => 20091003095744) do
 
+  create_table "assets", :force => true do |t|
+    t.string   "caption"
+    t.string   "title"
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.integer  "page_id"
+    t.string   "author"
+    t.string   "author_url"
+    t.string   "author_email"
+    t.string   "author_ip"
+    t.text     "content"
+    t.text     "content_html"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "filter_id",    :limit => 25
+    t.string   "user_agent"
+    t.string   "referrer"
+    t.datetime "approved_at"
+    t.integer  "approved_by"
+    t.string   "mollom_id"
+  end
+
   create_table "config", :force => true do |t|
-    t.string "key",   :limit => 40, :default => "", :null => false
-    t.string "value",               :default => ""
+    t.string "key",         :limit => 40, :default => "", :null => false
+    t.string "value",                     :default => ""
+    t.text   "description"
   end
 
   add_index "config", ["key"], :name => "key", :unique => true
@@ -35,6 +66,12 @@ ActiveRecord::Schema.define(:version => 20091003095744) do
     t.integer  "lock_version",                 :default => 0
   end
 
+  create_table "page_attachments", :force => true do |t|
+    t.integer "asset_id"
+    t.integer "page_id"
+    t.integer "position"
+  end
+
   create_table "page_parts", :force => true do |t|
     t.string  "name",      :limit => 100
     t.string  "filter_id", :limit => 25
@@ -46,10 +83,10 @@ ActiveRecord::Schema.define(:version => 20091003095744) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
-    t.string   "slug",          :limit => 100
-    t.string   "breadcrumb",    :limit => 160
-    t.string   "class_name",    :limit => 25
-    t.integer  "status_id",                    :default => 1,     :null => false
+    t.string   "slug",            :limit => 100
+    t.string   "breadcrumb",      :limit => 160
+    t.string   "class_name",      :limit => 25
+    t.integer  "status_id",                      :default => 1,     :null => false
     t.integer  "parent_id"
     t.integer  "layout_id"
     t.datetime "created_at"
@@ -57,10 +94,12 @@ ActiveRecord::Schema.define(:version => 20091003095744) do
     t.datetime "published_at"
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
-    t.boolean  "virtual",                      :default => false, :null => false
-    t.integer  "lock_version",                 :default => 0
+    t.boolean  "virtual",                        :default => false, :null => false
+    t.integer  "lock_version",                   :default => 0
     t.string   "description"
     t.string   "keywords"
+    t.boolean  "enable_comments",                :default => false
+    t.integer  "comments_count",                 :default => 0
   end
 
   add_index "pages", ["class_name"], :name => "pages_class_name"

@@ -1,0 +1,18 @@
+[submodule "vendor/extensions/paperclipped"]
+	path = vendor/extensions/paperclipped
+	url = git://github.com/kbingman/paperclipped.git
+[submodule "vendor/extensions/settings"]
+	path = vendor/extensions/settings
+	url = git://github.com/Squeegy/radiant-settings.git
+[submodule "vendor/extensions/mailer"]
+	path = vendor/extensions/mailer
+	url = git://github.com/radiant/radiant-mailer-extension.git
+[submodule "vendor/extensions/navigation_tags"]
+	path = vendor/extensions/navigation_tags
+	url = git://github.com/gunn/navigation_tags.git
+[submodule "vendor/extensions/wym_editor_filter"]
+	path = vendor/extensions/wym_editor_filter
+	url = git://github.com/jomz/radiant-wym-editor-filter-extension.git
+[submodule "vendor/extensions/page_preview"]
+	path = vendor/extensions/page_preview
+	url = http://github.com/tricycle/radiant-page-preview-extension.git
