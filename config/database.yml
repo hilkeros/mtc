@@ -29,7 +29,7 @@ test:
 
 production:
   adapter: mysql
-  database: mtc_production
-  username: root
-  password: 
+  database: mmm_mtc
+  username: mmm_mtc
+  password: PuprAecR
   host: localhost
