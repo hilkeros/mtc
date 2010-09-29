@@ -4,7 +4,26 @@ $(function() {
 		var url = $this.attr('data-update-uri')
 		$.getJSON(url+'?callback=?', function(json) {
 			$.each(json.messages, function() {
-				$this.append('<li style="display: none" class="'+ this.network + '">' + this.message +' <a href="'+ this.link +'" target="_blank">view</a></li>');
+				$('<li>', {
+					style: "display: none",
+					class: this.network
+				}).append(
+					$('<span>', {
+						class: 'author',
+						text: this.author
+					})
+				).append(
+					$('<span>', {
+						class: 'message',
+						text: this.message
+					})
+				).append(
+					$('<a>', {
+						href: this.link,
+						target: '_blank',
+						text: 'view'
+					})
+				).appendTo($this);
 			});
 			
 			$this.find('li:lt(3)').show()
@@ -12,11 +31,12 @@ $(function() {
 		
 		setInterval(function() {
 			var html = $this.find('li:first').html();
+			var klass = $this.find('li:first').attr('class')
 			$this.find('li:first').fadeOut('slow', function() {
 				$(this).remove()
 				$this.find('li:nth(2)').fadeIn()
 			})
-			$this.append('<li style="display:none">' + html + '</li>');
+			$this.append($('<li>', {class: klass}).html(html).hide());
 		}, 4000)
 	})	
 })
