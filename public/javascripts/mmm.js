@@ -6,6 +6,8 @@ $(function() {
 			$.each(json.messages, function() {
 				$this.append('<li style="display: none" class="'+ this.network + '">' + this.message +' <a href="'+ this.link +'" target="_blank">view</a></li>');
 			});
+			
+			$this.find('li:lt(3)').show()
 		});
 		
 		setInterval(function() {
