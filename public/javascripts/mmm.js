@@ -10,12 +10,12 @@ $(function() {
 				}).append(
 					$('<span>', {
 						class: 'author',
-						text: this.author
+						text: this.author + ": "
 					})
 				).append(
 					$('<span>', {
 						class: 'message',
-						text: this.message
+						text: this.message + " "
 					})
 				).append(
 					$('<a>', {

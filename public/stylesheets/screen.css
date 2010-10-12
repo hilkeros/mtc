@@ -137,3 +137,23 @@ input[type=text],input[type=password],textarea{width:12.25em;*width:11.9em;}
 #prevnext a{
 	color:#000;
 }
+
+/*Messages*/
+ul.band_messages li, ul.fan_messages li{
+	border-bottom:1px solid #333;
+	padding-bottom:3px;
+	padding-top:3px;
+	list-style:none;
+	padding-left:20px;
+	background-repeat:no-repeat;
+	background-position:0px 3px;
+}
+ul.band_messages, ul.fan_messages{
+	margin:0;
+}
+li.twitter{
+	background-image:url('/images/icons/twitter.png');
+}
+li.facebook{
+	background-image:url('/images/icons/facebook.png');
+}
