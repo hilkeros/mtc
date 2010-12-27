@@ -19,3 +19,6 @@
 [submodule "vendor/extensions/sibling_tags"]
 	path = vendor/extensions/sibling_tags
 	url = git://github.com/nelstrom/radiant-sibling-tags-extension.git
+[submodule "vendor/extensions/rss_reader"]
+	path = vendor/extensions/rss_reader
+	url = git://github.com/lorenjohnson/radiant-rss-reader.git

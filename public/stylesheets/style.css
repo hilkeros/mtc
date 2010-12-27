@@ -32,10 +32,15 @@ h1, h2, h3, h4, h5, h6, p, div, form, input {
 .14 {
 	font-size: 0.875em; /* 14px */
 }
-p, .readmore, .navi1 li {
+p, .readmore, .navi1 li, ul.shows li.date li p {
 	font-size: 0.75em; /* 12px */
 	line-height: 1.5em;
 }
+
+ul.shows li.date li p{
+	font-size: 1em;
+}
+
 ul.tweets li {
 	font-size: 0.6875em; /* 11px */
 }
