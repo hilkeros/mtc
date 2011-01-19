@@ -3,7 +3,7 @@ load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 set :user, 'mmm'
 set :application, "mtc"
 
-set :repository, "git@november.openminds.be:mtc.git"
+set :repository, "git@github.com:hilkeros/mtc.git"
 
 server "pro-004.openminds.be", :app, :web, :db, :primary => true
 
