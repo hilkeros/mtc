@@ -6,15 +6,15 @@ $(function() {
 			$.each(json.messages, function() {
 				$('<li>', {
 					style: "display: none",
-					class: this.network
+					'class': this.network
 				}).append(
 					$('<span>', {
-						class: 'author',
+						'class': 'author',
 						text: this.author + ": "
 					})
 				).append(
 					$('<span>', {
-						class: 'message',
+						'class': 'message',
 						text: this.message + " "
 					})
 				).append(
@@ -32,11 +32,11 @@ $(function() {
 		setInterval(function() {
 			var html = $this.find('li:first').html();
 			var klass = $this.find('li:first').attr('class')
-			$this.find('li:first').fadeOut('slow', function() {
-				$(this).remove()
-				$this.find('li:nth(2)').fadeIn()
+			$this.find('li:first').slideUp('slow', function() {
+				$(this).remove();
+				$this.find('li:nth(2)').fadeIn();
 			})
-			$this.append($('<li>', {class: klass}).html(html).hide());
+			$this.append($('<li>', {'class': klass}).html(html).hide());
 		}, 4000)
 	})	
 })
