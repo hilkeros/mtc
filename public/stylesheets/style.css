@@ -270,6 +270,7 @@ ul.tweets {
 
 .previous, .next {
 	font-family: 'EurostileLTStdMedium';
+	padding-left:15px;
  }
 	
 .previous {
