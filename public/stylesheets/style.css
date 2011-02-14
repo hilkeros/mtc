@@ -316,6 +316,9 @@ ul.artistlist li a span {
 	position: absolute;
 	width: 100%;
 	bottom: 4px;
+	left:0;
+	bottom:0;
+	background-color:#000;
 }
 
 ul.artistlist li#a-school-of-quiet { background-image: url(/images/artist_img/aschoolofquiet.jpg); }
