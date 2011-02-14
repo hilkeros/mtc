@@ -120,11 +120,11 @@ ul.navi2 li.last a {
 /* social button css sprites */
 .twitter-button, .facebook-button, .youtube-button, .netlog-button {
 	display: inline-block;
-	width: 14px;
-	height:  14px;
+	width: 16px;
+	height:  16px;
 	text-indent: -5000px;
-	background: url(/images/14px-social-logos.png) no-repeat;
 	text-align: left;
+  padding:1px;
 }
 .twitter-button:hover, .facebook-button:hover, .youtube-button:hover, .netlog-button:hover {
 	color:  maroon;
@@ -134,16 +134,16 @@ ul.navi2 li.last a {
 }
 
 .twitter-button {
-	background-position: 0 0;
+	background: url(/images/icons/twitter.png) no-repeat;
 }
 .facebook-button {
-	background-position: -14px 0;
+  background: url(/images/icons/facebook.png) no-repeat;
 }
 .youtube-button {
 	background-position: -28px 0;
 }
 .netlog-button {
-	background-position: -42px 0;
+  background: url(/images/icons/netlog.png) no-repeat;
 }
 
 /* news-item */
