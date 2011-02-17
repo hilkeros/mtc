@@ -213,13 +213,13 @@ div#col2 .box {
 	font-size:0.8125em; /* 13px */
 	margin-bottom:  0.25em;
 }
-input#email {
+input#email, input#EMAIL {
 	width: 186px;
 	outline-color: maroon;
 	margin-bottom:  0.5em;
 	padding:  0.25em 0.5em;
 }
-input#submit {
+input#submit, input#mc-embedded-subscribe {
 	cursor: pointer;
 	border-radius: 3px;
 	padding:  0.25em 1.75em ;
@@ -236,7 +236,7 @@ input#submit {
 	    rgb(252,252,252) 100%
 	);
 }
-input#submit:hover {
+input#submit:hover, input#mc-embedded-subscribe:hover {
 	color:  maroon;
 	-webkit-box-shadow: 0 0 5px 2px maroon;
 	-moz-box-shadow: 0 0 5px 2px maroon;
