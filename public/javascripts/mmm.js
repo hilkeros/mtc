@@ -37,6 +37,6 @@ $(function() {
 				$this.find('li:nth(2)').fadeIn();
 			})
 			$this.append($('<li>', {'class': klass}).html(html).hide());
-		}, 4000)
+		}, 8000)
 	})	
 })
